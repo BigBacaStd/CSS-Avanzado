@@ -11,6 +11,9 @@
     --color-subtitle: #888;
     --color-text: #555;
 
+    --color-border-reviews: #e5e6e7;
+    --color-company: #a5a6a7;
+
 }
 
 /*Estilos Generales */
@@ -351,20 +354,31 @@ body{
     font-weight: 600;
 }
 
-/*Servicios*/ 
+/*Estilos compartidos about*/ 
 
-.about__services{
+.about__services,
+.about__reviews,
+.about__clients,
+.about__price{
     width: 100%;
     margin-bottom: 3rem;
 }
 
-.services__header{
+/*Servicios*/ 
+
+.services__header,
+.reviews__header,
+.clients__header,
+.price__header{
     display: inline-block;
     margin-bottom: 2.5rem;
     padding-right: 1.2rem;
 }
 
-.services__title{
+.services__title,
+.reviews__title,
+.clients__title,
+.price__title{
     font-size: 2.1rem;
 }
 
@@ -395,4 +409,203 @@ body{
     font-size: 1.5rem;
     text-align: justify;
 }
+
+/*Reviews*/ 
+
+ .reviews__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+
+ .reviews__review{
+    flex-basis: calc(50% - 2.5rem);
+
+    border: 2px solid var(--color-border-reviews);
+    border-radius: 2rem;
+    padding-top: 0;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    padding-bottom: 1.5rem;
+    margin-right: 2.5rem;
+    margin-top: 4.5rem;
+    margin-bottom: 1rem;
+ }
+
+ .review__image-container{
+    width: 100%;
+ }
+
+ .review__image{
+    max-width: 9rem;
+    max-height: 9rem;
+    margin: 0 auto;
+    border-radius: 9rem;
+    margin-top: -4.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.22);
+ }
+
+ .review__description{
+    margin-bottom: 1rem;
+ }
+
+ .review__text{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+ }
+
+ .review__autor{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+ }
+
+ .review__name{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+ }
+
+ .review__company{
+    color: var(--color-company);
+    font-weight: 300;
+    font-size: 1.3rem;
+ }
+
+ .review__icon{
+    font-size: 3rem;
+    opacity: 0.5;
+    color: var(--color-secondary);
+ }
+
+ /*Clientes*/ 
+
+ .about__clients{
+    width: 100%;
+    margin-bottom: 5rem;
+ }
+
+ .clients__header{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+ }
+
+ .clients__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ .clients__link{
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    transition: all 300ms;
+ }
+
+ .clients__link:hover{
+    
+    opacity: 1;
+ }
+
+ .clients__image{
+    width: 145px;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+ }
+
+ /*Precios*/
+
+ .prices__container{
+    margin-bottom: 5rem;
+
+    display: flex;
+    flex-direction: row;
+    
+ }
+
+ .prices__box{
+    flex-basis: 50%;
+    height: 100%;
+    margin-right: 3rem;
+    padding: 3rem;
+    border: 2px solid var(--color-border-reviews);
+    text-align: center;
+    border-radius: 1.5rem;
+    transition: all 300ms ease-in-out;
+    
+ }
+
+ .prices__box:last-of-type{
+    margin-right: 0rem;
+ }
+
+ .prices__box:hover{
+    box-shadow: 0 18px 24px -5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1rem);
+ }
+
+ .prices__subtitle{
+    margin-bottom: 3rem;
+
+ }
+
+ .prices__text{
+    position: relative;
+    display: inline-block;
+ }
+
+ .prices__box:hover .prices__text::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.3rem;
+    height: 0.2rem;
+    background-color: var(--color-secondary);
+ }
+
+ .prices__price{
+    padding-bottom: 1rem;
+ }
+
+ .prices__number{
+    display: block;
+    font-size: 4.2rem;
+    line-height: 1;
+    color: var(--color-titles);
+ }
+
+ .prices__advice{
+    display: block;
+    color: var(--color-text);
+ }
+
+ .prices__buy{
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+ }
+
+ .prices__btn{
+    display: inline-block;
+    padding: 1.2rem;
+    border: 2px solid var(--color-border-reviews);
+    box-shadow: 0 10px 10px -8px var(--color-border-reviews);
+    border-radius: 3rem;
+
+ }
+
+ .prices__btn:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-secondary);
+    color: var(--color-principal);
+ }
+
+
+
 
